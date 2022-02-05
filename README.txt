@@ -11,7 +11,7 @@ removeCredit: https://ropsten.etherscan.io/tx/0x4862556c6d6e32943ba3cd2085482ef6
 One-click dApp: https://oneclickdapp.com/subject-puzzle
 Documentations fo the same: https://ipfs.io/ipfs/QmSCLsLykUdzeU7gVCJ7yA2LawAJyDMWsm5eVjUQu1rVGh
 If you want to access the deployed with just Metamask without installation or code run.
-
+PS: Do ensure the network selected on Metamask is Ropsten. OneCLickDapp uses the default network selected.
 
 
 ------------------SAMPLE README BY REMIX IDE------------------------------
