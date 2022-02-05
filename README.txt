@@ -9,7 +9,7 @@ Reference Transactions:
 addCredit: https://ropsten.etherscan.io/tx/0x685f21cd9235818c9da02f8634846c4cf6395f102f2a7dbb717a0174bbf0c288
 removeCredit: https://ropsten.etherscan.io/tx/0x4862556c6d6e32943ba3cd2085482ef6c7b6bfea85e422d98b224558028d3c8b
 One-click dApp: https://oneclickdapp.com/subject-puzzle
-Documentations fo the same: https://ipfs.io/ipfs/QmSCLsLykUdzeU7gVCJ7yA2LawAJyDMWsm5eVjUQu1rVGh
+Documentation for the same: https://ipfs.io/ipfs/QmSCLsLykUdzeU7gVCJ7yA2LawAJyDMWsm5eVjUQu1rVGh
 If you want to access the deployed with just Metamask without installation or code run.
 PS: Do ensure the network selected on Metamask is Ropsten. OneCLickDapp uses the default network selected.
 
