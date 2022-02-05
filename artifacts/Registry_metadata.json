@@ -1,0 +1,235 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "accountAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "credits",
+						"type": "uint256"
+					}
+				],
+				"name": "creditAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "accountAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "credits",
+						"type": "uint256"
+					}
+				],
+				"name": "creditRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "receiverAddress",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sendingAppAddress",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "receivingAppAddress",
+						"type": "address"
+					}
+				],
+				"name": "interactionCOmpleted",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "numCredits",
+						"type": "uint256"
+					}
+				],
+				"name": "addCredit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "balanceCredits",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "costPerCreditInWei",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "numCredits",
+						"type": "uint256"
+					}
+				],
+				"name": "removeCredit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "receiverAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "sendingAppAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "receivingAppAddress",
+						"type": "address"
+					}
+				],
+				"name": "submitInteraction",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"addCredit(uint256)": {
+					"details": "Function is reentrance secured as it manages onchain credit balances.  Function to add credits to an address ",
+					"params": {
+						"numCredits": "Number of credits to buy"
+					}
+				},
+				"balanceCredits(address)": {
+					"details": "basic virtual view function to check the balance of an account  balanceCredits: Check Credit Balance for an account ",
+					"params": {
+						"account": "Address of the account whose credist are to be checked."
+					},
+					"returns": {
+						"_0": "Returns the number of credits left in the account. "
+					}
+				},
+				"costPerCreditInWei()": {
+					"details": "basic virtual view function to check the _costPerCreditInWei  costPerCreditInWei: Check Credit Cost in Wei ",
+					"returns": {
+						"_0": "Returns the amount in wei "
+					}
+				},
+				"removeCredit(uint256)": {
+					"details": "Function is reentrance secured as it manages onchain credit balances.  Function to remove Credits and pay base currency token ",
+					"params": {
+						"numCredits": "Number of Credits to be reduced/encashed."
+					}
+				},
+				"submitInteraction(address,address,address)": {
+					"details": "senderAddress is diabled for now but might be needed in future for delgation calls. Function checks if sendingAppAddress and receivingAppAddress are actually dApp addresses. Function is reentrance secured as it manages onchain credit balances.  submitInteraction: Interaction function that can be called to distribute credts in prdefined ratio ",
+					"params": {
+						"receiverAddress": "The address who will recieve the 50% amount of interaction.",
+						"receivingAppAddress": "The address who will recieve the 25% amount of interaction.",
+						"sendingAppAddress": "The address who will recieve the 25% amount of interaction."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"constructor": {
+					"notice": "Empty constructor"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"InteractionRegistry.sol": "Registry"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"InteractionRegistry.sol": {
+			"keccak256": "0x18b85ce976b08de819a1760a6629a6b740b6fbeb5f8a79941feb3e0a21909c09",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://5ec4043317a4f62bca7c5438cc46250e7316a99e91eb55062d1e0382454173a6",
+				"dweb:/ipfs/QmfMA9AAKWY3AZgq6iZ1zgKt4SzvaopjBzop3ehNqdy3qt"
+			]
+		}
+	},
+	"version": 1
+}
